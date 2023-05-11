@@ -34,3 +34,15 @@ contract RecCoin is IERC20, IERC20Metadata, Ownable {
 
 
 }
+
+ /**
+     * @dev Sets the allowance for the spender to spend tokens on behalf of the owner.
+     * @param spender The address of the spender.
+     * @param amount The amount of tokens to allow.
+     * @return A boolean value indicating whether the approval was successful or not.
+     */
+
+function approve (address spender, uint256 amount) public returns (bool) {
+    _approve (msg.sender, spender, amount);
+    return true;
+}
